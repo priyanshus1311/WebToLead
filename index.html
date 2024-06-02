@@ -7,6 +7,8 @@
     <title>Web to Lead Form</title>
     <link rel="stylesheet" type="text/css" href="webToLead.css">
     <script src="webToLead.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 
 <body>
@@ -18,6 +20,7 @@
         <input type=hidden name="retURL" value="https://priyanshus1311.github.io/WebToLead/thanks.html">
         <input type="hidden" name="Lead_Date__c" class="outputdate">
         <input type="hidden" name="ProductInterest__c" class="outputproduct">
+        <input type=hidden name='captcha_settings' value='{"keyname":"web_to_lead_recaptcha","fallback":"true","orgId":"00D5j00000DBIk4","ts":""}'>
 
         <label for="first_name">First Name</label>
         <input id="first_name" maxlength="40" name="first_name" size="20"type="text" required=true/><br>
@@ -41,6 +44,8 @@
             <option value="GC3000 series">GC3000 series</option>
         </select>
 
+        <div class="g-recaptcha" data-sitekey="6LeVFO8pAAAAADjQKFMDMW8tx_Uaj2FAT-LukptQ"></div><br>
+        
         <input type="submit" name="submit" class="submit">
 
     </form>
