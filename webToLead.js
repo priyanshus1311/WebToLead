@@ -1,5 +1,5 @@
 let isChecked = false;
-function beforeSubmit() {
+function beforeSubmit(event) {
     if(isChecked){
     let inputLeadDate = document.querySelector('.dateInput').value;
     document.querySelector('.outputdate').value = new Date(inputLeadDate).toLocaleDateString("en-IN");
@@ -9,6 +9,7 @@ function beforeSubmit() {
     }
     else{
         alert("Please verify that you are not a ROBOT");
+        event.preventDefault();
     }
 }
 
