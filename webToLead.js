@@ -1,9 +1,15 @@
+let isChecked = false;
 function beforeSubmit() {
+    if(isChecked){
     let inputLeadDate = document.querySelector('.dateInput').value;
     document.querySelector('.outputdate').value = new Date(inputLeadDate).toLocaleDateString("en-IN");
 
     let inputProcust = document.querySelector('.products').value;
     document.querySelector('.outputproduct').value = inputProcust;
+    }
+    else{
+        alert("Please verify that you are not a ROBOT");
+    }
 }
 
 function timestamp() {
@@ -14,3 +20,7 @@ function timestamp() {
     }
 } 
 setInterval(timestamp, 500); 
+
+function captchaChecked(){
+    isChecked = true;
+}
