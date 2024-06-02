@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Lead Form</title>
+    <link rel="stylesheet" type="text/css" href="webToLead.css">
+    <script src="webToLead.js"></script>
+</head>
+
+<body>
+    <h1> Lead Form</h1>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5j00000DBIk4"
+        method="POST" onsubmit="beforeSubmit()">
+
+        <input type=hidden name="oid" value="00D5j00000DBIk4">
+        <input type=hidden name="retURL" value="https://trailhead.salesforce.com/">
+        <input type="hidden" name="Lead_Date__c" class="outputdate">
+        <input type="hidden" name="ProductInterest__c" class="outputproduct">
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20"type="text" required=true/><br>
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required=true/><br>
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" required=true/><br>
+
+        <!--Lead Date:<span class="dateInput dateOnlyInput"><input id="00NJ4000000FpIW" name="00NJ4000000FpIW" size="12"
+                type="text" /></span><br>-->
+        <label for="email">Lead Date</label>
+        <input type="date" required=true class="dateInput"><br>
+
+        <label for="email">Products Interested</label>
+        <select id="product" name="prod" class="products" required=true>
+            <option value="None" selected disabled hidden>Select an option</option>
+            <option value="GC1000 series">GC1000 series</option>
+            <option value="GC5000 series">GC5000 series</option>
+            <option value="GC3000 series">GC3000 series</option>
+        </select>
+
+        <input type="submit" name="submit" class="submit">
+
+    </form>
+
+</body>
+
+</html>
